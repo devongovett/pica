@@ -37,7 +37,7 @@ function resizeBuffer(options, callback) {
 
   var _opts = {
     src:      options.src,
-    dest:     options.dest,
+    dest:     null,
     width:    options.width|0,
     height:   options.height|0,
     toWidth:  options.toWidth|0,
@@ -76,6 +76,7 @@ function resizeBuffer(options, callback) {
     wr.postMessage(_opts, [options.src.buffer]);
 
   } else {
+    _opts.dest = options.dest;
     resize(_opts, callback);
   }
 }
