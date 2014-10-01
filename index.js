@@ -73,7 +73,7 @@ function resizeBuffer(options, callback) {
       wr.terminate();
     };
 
-    wr.postMessage(_opts, [options.src.buffer]);
+    wr.postMessage(_opts, [ options.src.buffer ]);
 
   } else {
     _opts.dest = options.dest;
